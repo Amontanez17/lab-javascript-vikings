@@ -86,7 +86,7 @@ class War {
     const saxon = this.saxonArmy[saxonIndex];
     const viking = this.vikingArmy[vikingIndex];
 
-    this.vikingArmy = this.vikingArmy.splice((viking) => viking.health === 0);
+    this.vikingArmy = this.vikingArmy.filter((viking) => viking.health === 0);
 
     return viking.receiveDamage(saxon.strength);
   }
